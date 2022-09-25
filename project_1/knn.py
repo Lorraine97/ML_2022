@@ -9,7 +9,7 @@ from sklearn.metrics import accuracy_score
 # https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html
 class KNNAnalysis:
     
-    def __init__(self, x_train, x_test, y_train, y_test):
+    def __init__(self, x_train, x_test, y_train, y_test, best_k=1):
         self.x_train = x_train
         self.x_test = x_test
         self.y_train = y_train
@@ -19,7 +19,7 @@ class KNNAnalysis:
             'weights': 'distance',
             'p': 2  # euclidean_distance
         }
-        self.knn_best = KNeighborsClassifier(n_neighbors=1, **self.common_attributes)
+        self.knn_best = KNeighborsClassifier(n_neighbors=best_k, **self.common_attributes)
     
     def k_performance(self):
         train_scores, test_scores = [], []
@@ -46,7 +46,8 @@ if __name__ == "__main__":
     tester1 = KNNAnalysis(x_train=shared.loan_x_train,
                           x_test=shared.loan_x_test,
                           y_train=shared.loan_y_train,
-                          y_test=shared.loan_y_test)
+                          y_test=shared.loan_y_test,
+                          best_k=5)
     
     tester1.plot_pruning()
     shared.learning_analysis(shared.loan_attr_data, shared.loan_status_data, tester1.knn_best)
