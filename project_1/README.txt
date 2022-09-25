@@ -16,6 +16,8 @@ And python version of 3.8 or higher.
 
 ## Running scripts
 
+The repository is accessible at: https://github.com/Lorraine97/ML_2022/tree/main/project_1
+
 Note: all of the scripts here include both model training and plotting of the performance.
 
 - Decision trees with some form of pruning
