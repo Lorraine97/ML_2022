@@ -21,7 +21,8 @@ Before running the script, need to update mlrose package scripts where it uses `
 
 The repository is accessible at: https://github.com/Lorraine97/ML_2022/tree/main/project_2
 
-The `tutorial_examples.ipynb` is where you would run the examples. It is adopted from [mlrose tutorial](https://github.com/gkhayes/mlrose/blob/master/tutorial_examples.ipynb)
+The `assignment_2.ipynb` is where you would run the examples. It is adopted from [mlrose tutorial](https://github.com/gkhayes/mlrose/blob/master/tutorial_examples.ipynb), with some added explanation and plotting. 
+
 Note: all of the scripts here include both model training and plotting of the performance.
 
 ## References
